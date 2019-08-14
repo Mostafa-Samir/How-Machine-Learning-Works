@@ -1,6 +1,6 @@
-# Unnamed Upcoming Book
+# How Machine Learning Works
 
-This repository contains the code accompanying the work done in [Unnamed Upcoming Book](link-tbd) by _Mostafa Samir_, Manning Publications. All the code is written with `python`.
+This repository contains the code accompanying the work done in [How Machine Learning Works](https://www.manning.com/books/how-machine-learning-works) by _Mostafa Samir_, Manning Publications. All the code is written with `python`.
 
 ## Usage
 To start using this code, you need first to clone it to your local machine. There are two ways you can do that:
