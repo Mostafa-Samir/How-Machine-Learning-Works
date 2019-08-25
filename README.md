@@ -7,7 +7,7 @@ To start using this code, you need first to clone it to your local machine. Ther
 
 1. Using the terminal/cmd (provided that you have `git` installed) by running:
 ```
-$ git clone https://github.com/Mostafa-Samir/Unnamed-Upcoming-Book-Code.git
+$ git clone git@github.com:Mostafa-Samir/How-Machine-Learning-Works.git
 ```
 
 2. By clicking on the green button above labeled **Clone or download** and choosing **Download ZIP**. Extract the zip after downloading it.
