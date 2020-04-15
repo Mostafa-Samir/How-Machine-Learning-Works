@@ -77,7 +77,7 @@ def estimate_forest_variance(X, y, runs=100, **kwargs):
     
     return var
 
-def plot_train_vs_test_errors_vs_variance(X_train, y_train, X_test, y_test):
+def draw_tree_learning_curves(X_train, y_train, X_test, y_test):
     
     variances = []
     train_error, test_error = [], []
