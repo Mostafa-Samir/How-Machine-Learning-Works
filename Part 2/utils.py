@@ -5,7 +5,10 @@ from sklearn.ensemble import BaggingRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.metrics.pairwise import euclidean_distances
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import median_absolute_error, mean_squared_error, mean_absolute_error
+
 
 def estimate_tree_variance(X, y, runs=100, **kwargs):
     
@@ -122,3 +125,20 @@ def draw_tree_learning_curves(X_train, y_train, X_test, y_test):
     ax2.legend()
     ax2.set_yticks([])
     ax2.set_xlabel("Number of Leaves")
+
+def get_pairwise_euclidean_distances(docs):
+    distances_dict = {}
+    docs_count = len(docs)
+    
+    vectorizer = TfidfVectorizer()
+    vectorized_data = vectorizer.fit_transform(docs)
+    
+    distances_matrix = euclidean_distances(vectorized_data, vectorized_data)
+    
+    
+    for i in range(docs_count):
+        if i != docs_count - 1:
+            for j in range(i + 1, docs_count):
+                distances_dict[(i, j)] = distances_matrix[i, j]
+            
+    return distances_dict
